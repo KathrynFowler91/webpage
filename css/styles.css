@@ -1,0 +1,140 @@
+/*----------------------------------------------*/
+/* style sheet - kathryn fowler					*/
+/*----------------------------------------------*/
+
+
+/* master reset */
+body, div, h1, h2, h3, h4, p, ul, ol, li, img, table, tr, td, a{margin:0; padding:0;}
+
+
+/* fonts */
+@font-face{	font-family: Dosis; src:url("../fonts/Dosis/Dosis-Regular.ttf");}
+@font-face{ font-family: OpenSans-Light; src:url("../fonts/Open_Sans-Light.ttf");}
+h1, h2, h3, h4, a{font-family:"Dosis","OpenSans", Helvetica, sans-serif;}
+p, ul, ol, li, img, table, tr, td{font-family:"Dosis", Helvetica, sans-serif;}
+
+
+/* setting variables */
+:root {
+	--grey:#c8c8c8;
+	--textcolor1: white;
+	--textcolor2: black;
+	--themecolor1:#1993ad;
+	--themecolor2:#a3d3de;
+	--themecolor3:#e8f4f6;
+}
+
+
+/* font sizes */
+html { font-size: 14px; color: var(--textcolor);}
+@media (min-width: 900px) { html{font-size: 16px;}}
+@media (min-width: 1200px) { html{font-size: 18px;}}
+/* h1 { font-size: 3.125em; padding: 5px 0;} */
+h1 { font-size: 5em; padding: 10px 0;}
+/* h2 { font-size: 2.3125em;} */
+h2 { font-size: 3.2em; padding: 10px 0;}
+h3 { font-size: 1.75em; padding: 10px 3px;}
+h4 { font-size: 1.75em; padding: 20px 3px;}
+p { font-size: 0.95em; padding: 10px 3px;}
+
+
+/* general*/
+.fp { min-height: 70vh;}
+.np { padding: 10px; width: 95%; margin: auto;}
+@media (min-width:993px){.np {max-width: 1000px;}}
+@media (min-width:600px){.np {min-width: 590px;}}
+@media (max-width:600px){.np {width:98%; padding: 2px;}}
+.heading { width: 100%; text-align: center; padding: 30px 0px; font-weight: bold;}
+.clear {clear:both;}
+
+
+/* wrapper */
+.wrapper{background: var(--themecolor3);}
+
+
+/* navbar */
+.bg-nav { background-color: var(--themecolor1);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;}
+.navbar{ overflow: hidden; 
+	padding-right: 20px;
+	display: inline-block;
+	float: right;}
+.navbar a {float: left; 
+	display: block; 
+	color: var(--themecolor3); 
+	text-align: center; 
+	padding: 10px 15px; 
+	text-decoration: none; 
+	font-size: 1.3em; 
+	font-weight: normal;
+	outline: 0;}
+.navbar a:hover { display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*padding: 10px;*/
+	border: none;
+	color: var(--textcolor1);
+	font-weight: bold;
+	text-decoration: normal;
+	text-align: center;
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	white-space: pre;}
+.navbar .icon { display: none;}
+@media screen and (max-width: 600px) {
+  .navbar a {display: none;}
+  .navbar a.icon { display: inline-block; font-size: 1.5em;}}
+@media screen and (max-width: 600px) {
+  .navbar.responsive { position: relative; width: 100%; width: 100%; background-color: var(--themecolor1);}
+  .navbar.responsive a.icon { position: absolute; right: 0; top: 0;}
+  .navbar.responsive a { float: none; display: block; text-align: left; text-align: center;}}
+  
+  
+/* home */
+.home { position: relative; background: var(--themecolor1) url('../images/pattern(4).png') repeat center; color:var(--textcolor1);}
+.home-content { margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); text-align:center;}
+.home img { display: block; margin: auto; width: 45%; max-width: 500px; min-width: 200px;}
+
+
+/* about */
+.about a{ color: var(--themecolor1); text-decoration: none;}
+.colortext { color: var(--themecolor1);}
+
+
+/* updates */
+.updates{ padding-bottom: 40px;}
+.updates a{color: var(--themecolor1); text-decoration: none;}
+.row { display: flex; flex-wrap: wrap; padding: 0 4px; justify-content: center}
+.column { flex: 25%; max-width: 24%; padding: 0 4px;}
+.item{ margin-top: 8px; vertical-align: middle; min-height: 40px;  background: var(--textcolor1); padding: 5px;}
+@media (max-width: 900px) {
+  .column { flex: 33.3%; max-width: 32%;}
+  .no-disp1 {display: none;}
+}
+@media (max-width: 600px) {
+  .column { flex: 50%; max-width: 48%;}
+  .no-disp2 {display: none;}
+}
+@media (max-width: 450px) {
+  .column { flex: 100%; max-width: 98%;}
+}
+.video{margin: 4px;}
+.inline h4, .inline p{display:inline;}
+.caption{font-size: 0.85em; text-align: right;}
+.recent-publication img{display: block; margin: auto; width: 55%;}
+.recent-publication a{color: var(--textcolor2);}
+.recent-publication i{font-size: 0.85em;}
+
+/* footer */
+.footer { background: var(--themecolor1) url('../images/pattern(4).png') repeat center; padding: 20px; overflow: auto; vertical-align: middle;}
+.left{display: inline-block; float: left;}
+.left img{ border: 2px solid var(--themecolor3);}
+.right{display: block; text-align: right; color: var(--textcolor1); float: right;}
+.right a{color: var(--themecolor3); text-decoration: none; font-style: Dosis;}
+.right p{font-size: 1.1em; font-weight: bold;}
+
+
