@@ -79,18 +79,19 @@ p { font-size: 0.95em; padding: 10px 3px;}
 	border: none;
 	color: var(--textcolor1);
 	font-weight: bold;
-	text-decoration: normal;
-	text-align: center;
-	-o-text-overflow: clip;
+	/*text-decoration: normal;*/
+	/*-o-text-overflow: clip;
 	text-overflow: clip;
-	white-space: pre;}
+	white-space: pre;*/}
 .navbar .icon { display: none;}
 @media screen and (max-width: 600px) {
   .navbar a {display: none;}
-  .navbar a.icon { display: inline-block; font-size: 1.5em;}}
+  /*.navbar a.icon { display: inline-block; font-size: 1.5em; }*/
+  .navbar a.icon { float:right; display:block; font-size: 1.5em;}
+  .navbar a.icon:hover { float:right; display:block; font-size: 1.5em;}}
 @media screen and (max-width: 600px) {
-  .navbar.responsive { position: relative; height: 100%; width: 100%; background-color: var(--themecolor1);}
-  .navbar.responsive a.icon { position: absolute; right: 0; top: 0;}
+  .navbar.responsive { position: relative; background-color: var(--themecolor1); width:100%}
+  .navbar.responsive .icon { position: absolute; right: 20px; top: 0;}
   .navbar.responsive a { float: none; display: block; text-align: center;}}
   
   
